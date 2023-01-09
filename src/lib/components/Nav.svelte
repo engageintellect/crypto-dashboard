@@ -1,6 +1,8 @@
 <div class="navbar bg-base-300 sticky top-0 z-20">
 	<div class="navbar-start">
 		<div class="dropdown">
+			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+			<!-- svelte-ignore a11y-label-has-associated-control -->
 			<label tabindex="0" class="btn btn-ghost btn-circle">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +18,7 @@
 					/></svg
 				>
 			</label>
+			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<ul
 				tabindex="0"
 				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
@@ -24,7 +27,7 @@
 				<li><a href="/about">About</a></li>
 				<li><a href="/posts">Posts</a></li>
 				<li><a href="/fng">Fear & Greed</a></li>
-				<li><a href="/portfolio">Portfolio</a></li>
+				<li><a href="/btc">BTC</a></li>
 			</ul>
 		</div>
 	</div>
