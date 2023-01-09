@@ -23,13 +23,13 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="/about">About</a></li>
 				<li><a href="/posts">Posts</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li><a href="/fng">Fear & Greed</a></li>
 				<li><a href="/portfolio">Portfolio</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="navbar-center">
-		<a class="btn btn-ghost normal-case text-xl">Market Watch</a>
+		<a href="/" class="btn btn-ghost normal-case text-xl">Market Watch</a>
 	</div>
 	<div class="navbar-end">
 		<button class="btn btn-ghost btn-circle">
