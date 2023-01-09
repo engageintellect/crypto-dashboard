@@ -1,9 +1,8 @@
 <!-- svelte-ignore a11y-missing-attribute -->
-
-<!-- TradingView Widget BEGIN -->
-<div>
+<html>
+	<!-- TradingView Widget BEGIN -->
 	<div class="tradingview-widget-container">
-		<div id="tradingview_b1c2e" style="height: 75vh;" />
+		<div id="tradingview_e91d2" style="height: 75vh;" />
 		<div class="tradingview-widget-copyright" />
 		<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 		<script type="text/javascript">
@@ -17,13 +16,17 @@
 				locale: 'en',
 				toolbar_bg: '#f1f3f6',
 				enable_publishing: false,
-				withdateranges: true,
 				hide_side_toolbar: false,
 				allow_symbol_change: true,
-				studies: ['MACD@tv-basicstudies', 'RSI@tv-basicstudies'],
-				container_id: 'tradingview_b1c2e'
+				studies: [
+					'AwesomeOscillator@tv-basicstudies',
+					'BB@tv-basicstudies',
+					'MACD@tv-basicstudies',
+					'RSI@tv-basicstudies'
+				],
+				container_id: 'tradingview_e91d2'
 			});
 		</script>
 	</div>
-</div>
-<!-- TradingView Widget END -->
+	<!-- TradingView Widget END -->
+</html>
