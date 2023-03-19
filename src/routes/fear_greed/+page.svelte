@@ -11,7 +11,7 @@
 	<div class="text-4xl">Fear & Greed</div>
 
 	<div class="card">
-		<div class="card-body bg-base-300 my-2 rounded-lg">
+		<div class="card-body bg-base-300 my-2">
 			<div class="flex justify-between items-center text-md md:text-lg lg:text-xl">
 				<div class="bg-neutral py-1 px-2 rounded-full">
 					{fear_greed}/100

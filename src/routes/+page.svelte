@@ -18,14 +18,15 @@
 	};
 </script>
 
-<div class="bg-base-300 rounded-lg shadow-lg">
+<div class="bg-base-300 shadow-lg min-h-screen">
 	<div class="p-4">
 		<div class="flex justify-between items-center">
 			<div>
-				<div class="text-2xl text-base-content lg:text-2xl font-bold">BTC/USD</div>
+				<div class="text-xl text-base-content lg:text-2xl font-semibold">BTC/USD</div>
 
-				<div class="text-2xl text-primary">
-					${data.btc.USD.last}
+				<div class="text-3xl font-bold text-primary">
+					<span> $ </span>
+					{data.btc.USD.last.toLocaleString()}
 				</div>
 			</div>
 

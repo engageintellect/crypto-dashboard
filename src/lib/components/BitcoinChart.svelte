@@ -1,10 +1,10 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <html>
 	<div class="tradingview-widget-container">
-		<div id="tradingview_e91d2" style="height: 80vh;" />
+		<div id="tradingview_e91d2" style="height: 80vh" />
 		<div class="tradingview-widget-copyright" />
 		<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-		<script type="text/javascript">
+		<script class="border-lg" type="text/javascript">
 			new TradingView.widget({
 				autosize: true,
 				symbol: 'BNC:BLX',
