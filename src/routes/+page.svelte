@@ -1,6 +1,7 @@
 <script lang="ts">
-	import BitcoinChart from '$lib/components/BitcoinChart.svelte';
 	import type { PageData } from './$types';
+	import BitcoinChart from '$lib/components/BitcoinChart.svelte';
+
 	export let data: PageData;
 
 	const fear_greed = data.fear_res.data[0].value;
@@ -21,7 +22,7 @@
 	<div class="p-4">
 		<div class="flex justify-between items-center">
 			<div>
-				<div class="text-2xl lg:text-2xl font-bold">BTC/USD</div>
+				<div class="text-2xl text-base-content lg:text-2xl font-bold">BTC/USD</div>
 
 				<div class="text-2xl text-primary">
 					${data.btc.USD.last}
@@ -29,7 +30,7 @@
 			</div>
 
 			<div
-				class="text-sm md:text-lg lg:text-xl font-semibold flex flex-col lg:flex-row lg:gap-5 uppercase items-end"
+				class="text-md md:text-lg lg:text-xl font-thin text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-end"
 			>
 				<div class="hidden lg:flex">
 					{fear_greed}/100
@@ -40,11 +41,11 @@
 
 				<div>
 					{#if whatToDO() === 'BUY🚀'}
-						<span class="bg-green-500 rounded-full py-1 px-2">{whatToDO()}</span>
+						<span class="bg-green-600 rounded-full py-1 px-2">{whatToDO()}</span>
 					{:else if whatToDO() === 'SELL📉'}
-						<span class="bg-red-500 rounded-full py-1 px-2">{whatToDO()}</span>
+						<span class="bg-red-600 rounded-full py-1 px-2">{whatToDO()}</span>
 					{:else}
-						<span class=" bg-amber-500 rounded-full py-1 px-2">{whatToDO()}</span>
+						<span class=" bg-amber-600 rounded-full py-1 px-2">{whatToDO()}</span>
 					{/if}
 				</div>
 			</div>

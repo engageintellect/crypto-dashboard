@@ -1,4 +1,4 @@
-<div class="navbar bg-base-300 sticky top-0 z-20">
+<div class="navbar bg-base-300 sticky top-0 z-20 text-base-content">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -25,9 +25,9 @@
 			>
 				<li><a href="/">Home</a></li>
 				<li><a href="/about">About</a></li>
+				<li><a href="/fear_greed">Fear & Greed</a></li>
+				<li><a href="/news">News</a></li>
 				<li><a href="/posts">Posts</a></li>
-				<li><a href="/fng">Fear & Greed</a></li>
-				<li><a href="/btc">BTC</a></li>
 			</ul>
 		</div>
 	</div>

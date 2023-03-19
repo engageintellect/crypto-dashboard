@@ -40,7 +40,7 @@
 		technical analysis tools.
 	</div>
 
-	<div class="text-2xl font-semibold text-neutral-content">Conclusion</div>
+	<!-- <div class="text-2xl font-semibold text-neutral-content">Conclusion</div>
 
 	<div>
 		The market fear and greed index is a sentiment indicator that measures the emotions of traders
@@ -49,5 +49,5 @@
 		analysis tools, it can be a powerful tool for making investment decisions. As for Bitcoin, the
 		market fear and greed index can be used to gauge the sentiment of traders towards the asset,
 		providing a potential opportunity for buying or selling the cryptocurrency.
-	</div>
+	</div> -->
 </div>
