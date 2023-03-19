@@ -17,7 +17,7 @@
 				enable_publishing: false,
 				hide_side_toolbar: false,
 				allow_symbol_change: true,
-				studies: ['BB@tv-basicstudies', 'MACD@tv-basicstudies', 'RSI@tv-basicstudies'],
+				studies: ['BB@tv-basicstudies', 'RSI@tv-basicstudies'],
 				container_id: 'tradingview_e91d2'
 			});
 		</script>
