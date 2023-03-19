@@ -13,10 +13,10 @@
 	<div class="card">
 		<div class="card-body bg-base-300 my-2 rounded-lg">
 			<div class="flex justify-between items-center text-md md:text-lg lg:text-xl">
-				<div class=" font-bold">
+				<div class="bg-neutral py-1 px-2 rounded-full">
 					{fear_greed}/100
 				</div>
-				<div class="font-bold">
+				<div class="">
 					{#if fear_greed_classification === 'Extreme Fear'}
 						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
 					{:else if fear_greed_classification === 'Fear'}
@@ -30,7 +30,7 @@
 					{/if}
 				</div>
 
-				<div class=" font-bold">
+				<div class="">
 					{#if fear_greed < 10}
 						<span class="bg-green-600 rounded-full py-1 px-2">BUY🚀</span>
 					{:else if fear_greed > 90}
@@ -45,7 +45,7 @@
 </div>
 
 <div>
-	<div>
+	<div class="text-center">
 		<a href="/about"> What is the Fear & Greed Index?</a>
 	</div>
 </div>
