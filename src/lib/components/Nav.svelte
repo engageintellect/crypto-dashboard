@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="navbar-center">
-		<a href="/" class="btn btn-ghost normal-case text-xl">Market Watch</a>
+		<a href="/" class="btn btn-ghost normal-case text-xl">Bitcoin</a>
 	</div>
 	<div class="navbar-end">
 		<button class="btn btn-ghost btn-circle">

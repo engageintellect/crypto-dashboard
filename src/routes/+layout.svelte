@@ -6,7 +6,7 @@
 
 <div class="bg-base-200">
 	<Nav />
-	<div class="container py-10 px-6 mx-auto min-h-screen">
+	<div class="max-w-5xl mx-auto my-5">
 		<slot />
 	</div>
 	<Footer />

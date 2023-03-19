@@ -2,7 +2,7 @@
 <html>
 	<!-- TradingView Widget BEGIN -->
 	<div class="tradingview-widget-container">
-		<div id="tradingview_e91d2" style="height: 75vh;" />
+		<div id="tradingview_e91d2" style="height: 80vh;" />
 		<div class="tradingview-widget-copyright" />
 		<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 		<script type="text/javascript">
@@ -18,12 +18,7 @@
 				enable_publishing: false,
 				hide_side_toolbar: false,
 				allow_symbol_change: true,
-				studies: [
-					'AwesomeOscillator@tv-basicstudies',
-					'BB@tv-basicstudies',
-					'MACD@tv-basicstudies',
-					'RSI@tv-basicstudies'
-				],
+				studies: ['BB@tv-basicstudies', 'MACD@tv-basicstudies', 'RSI@tv-basicstudies'],
 				container_id: 'tradingview_e91d2'
 			});
 		</script>
