@@ -30,7 +30,7 @@
 			</div>
 
 			<div
-				class="text-md md:text-lg lg:text-xl font-thin text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-end"
+				class="text-lg lg:text-xl font-thin text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-end"
 			>
 				<div class="hidden lg:flex">
 					{fear_greed}/100
