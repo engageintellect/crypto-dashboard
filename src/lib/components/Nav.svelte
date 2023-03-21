@@ -19,10 +19,7 @@
 				>
 			</label>
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-			<ul
-				tabindex="0"
-				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-			>
+			<ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 w-52">
 				<li><a href="/">Home</a></li>
 				<li><a href="/about">About</a></li>
 				<li><a href="/fear_greed">Fear & Greed</a></li>

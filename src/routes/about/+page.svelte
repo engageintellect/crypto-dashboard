@@ -4,8 +4,8 @@
 	<div>
 		In the world of investing, emotions often play a significant role in decision-making. Fear and
 		greed are two emotions that can heavily influence the behavior of traders in financial markets.
-		To quantify these emotions, the market fear and greed index was created. In this blog post, we
-		will discuss what the market fear and greed index is and how it can be used for Bitcoin.
+		To quantify these emotions, the market fear and greed index was created. We will discuss what
+		the market fear and greed index is and how it can be used for Bitcoin.
 	</div>
 	<div class="text-2xl font-semibold text-neutral-content">
 		What is the Market Fear and Greed Index?
@@ -26,12 +26,12 @@
 	<div class="text-2xl font-semibold text-neutral-content">How can it be used for Bitcoin?</div>
 
 	<div>
-		Bitcoin is a highly volatile asset, and emotions often play a significant role in its price
-		movements. The market fear and greed index can be used to gauge the sentiment of traders towards
-		Bitcoin. When the index is in the extreme fear zone, it may be an excellent opportunity to buy
-		Bitcoin as it could indicate that the asset is oversold. On the other hand, when the index is in
-		the extreme greed zone, it may be a sign that the asset is overbought and could experience a
-		price correction.
+		Bitcoin is a <strong>highly</strong> volatile asset, and emotions often play a significant role in
+		its price movements. The market fear and greed index can be used to gauge the sentiment of traders
+		towards Bitcoin. When the index is in the extreme fear zone, it may be an excellent opportunity to
+		buy Bitcoin as it could indicate that the asset is oversold. On the other hand, when the index is
+		in the extreme greed zone, it may be a sign that the asset is overbought and could experience a price
+		correction.
 	</div>
 
 	<div>

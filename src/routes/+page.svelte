@@ -8,9 +8,9 @@
 	const fear_greed_classification = data.fear_res.data[0].value_classification;
 
 	const whatToDO = () => {
-		if (fear_greed < 10) {
+		if (fear_greed < 20) {
 			return 'BUY🚀';
-		} else if (fear_greed > 90) {
+		} else if (fear_greed > 80) {
 			return 'SELL📉';
 		} else {
 			return 'HOLD🕜';
@@ -26,7 +26,7 @@
 
 				<div class="text-3xl font-bold text-primary">
 					<span> $ </span>
-					{data.btc.USD.last.toLocaleString()}
+					{data.btc.last_trade_price.toLocaleString()}
 				</div>
 			</div>
 
