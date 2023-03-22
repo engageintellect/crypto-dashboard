@@ -1,8 +1,8 @@
 import type { PageLoad } from './$types';
 
 export const load = (async ({ fetch, params }) => {
-	// TODO: These two fetches are identical, except for the limit parameter. Can we make this more DRY?
-	const res = await fetch(`https://api.alternative.me/fng/?limit=6`);
+	//TODO: This can be refactored to use the same fetch call with different params
+	const res = await fetch(`https://api.alternative.me/fng/?limit=1`);
 	const fng = await res.json();
 
 	const last_30_days_res = await fetch(`https://api.alternative.me/fng/?limit=30`);
