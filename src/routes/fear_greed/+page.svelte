@@ -64,6 +64,15 @@
 		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
 			{#each data.last_30_days.data as day}
 				<div class="flex flex-col bg-base-100 p-2 gap-2 shadow-md">
+					<div class="font-thin text-sm">
+						{new Date(day.timestamp * 1000).toLocaleDateString('en-US', {
+							weekday: 'short',
+							year: '2-digit',
+							month: '2-digit',
+							day: '2-digit'
+						})}
+					</div>
+
 					<div>
 						{#if day.calue_classification === 'Extreme Fear'}
 							<span class="bg-emerald-900 rounded-full py-1 px-2">BUY</span>
@@ -78,16 +87,9 @@
 						{/if}
 						<!-- {day.value_classification} -->
 					</div>
+
 					<div>
 						{day.value}/100
-					</div>
-					<div class="font-thin text-sm">
-						{new Date(day.timestamp * 1000).toLocaleDateString('en-US', {
-							weekday: 'short',
-							year: '2-digit',
-							month: '2-digit',
-							day: '2-digit'
-						})}
 					</div>
 				</div>
 			{/each}
