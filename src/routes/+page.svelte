@@ -4,8 +4,8 @@
 
 	export let data: PageData;
 
-	const fear_greed = data.fear_res.data[0].value;
-	const fear_greed_classification = data.fear_res.data[0].value_classification;
+	const fear_greed = data.fear.data[0].value;
+	const fear_greed_classification = data.fear.data[0].value_classification;
 
 	const whatToDO = () => {
 		if (fear_greed < 20) {
