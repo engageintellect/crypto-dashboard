@@ -1,5 +1,5 @@
 <div class="flex  flex-col gap-5 text-base-content px-2">
-	<div class="text-4xl font-semibold text-neutral-content">About:</div>
+	<div class="text-4xl font-semibold text-neutral-content">About Fear & Greed:</div>
 
 	<div>
 		In the world of investing, emotions often play a significant role in decision-making. Fear and

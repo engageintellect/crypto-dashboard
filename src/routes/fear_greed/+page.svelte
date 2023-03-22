@@ -22,15 +22,15 @@
 				</div>
 				<div class="">
 					{#if fear_greed_classification === 'Extreme Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
+						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}😱</span>
 					{:else if fear_greed_classification === 'Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
+						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}🫢</span>
 					{:else if fear_greed_classification === 'Extreme Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
+						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}💰</span>
 					{:else if fear_greed_classification === 'Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
+						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}🤑</span>
 					{:else}
-						<span class="bg-amber-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
+						<span class="bg-amber-600 rounded-full py-1 px-2">{fear_greed_classification}😑</span>
 					{/if}
 				</div>
 

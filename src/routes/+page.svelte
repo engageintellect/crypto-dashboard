@@ -24,6 +24,7 @@
 			<div>
 				<div class="text-xl text-base-content lg:text-2xl font-semibold">BTC/USD</div>
 
+				<!-- //TODO: SHOW IF PRICE IS UP OR DOWN SINCE PREVIOUS DAY -->
 				<div class="text-4xl font-extrabold text-primary">
 					<span> $ </span>
 					{data.btc.last_trade_price.toLocaleString()}
