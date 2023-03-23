@@ -23,15 +23,15 @@
 
 				<div class="uppercase">
 					{#if fear_greed_classification === 'Extreme Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}😱</span>
+						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
 					{:else if fear_greed_classification === 'Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}🫢</span>
+						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
 					{:else if fear_greed_classification === 'Extreme Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}💰</span>
+						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
 					{:else if fear_greed_classification === 'Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}🤑</span>
+						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
 					{:else}
-						<span class="bg-amber-600 rounded-full py-1 px-2">{fear_greed_classification}😑</span>
+						<span class="bg-amber-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
 					{/if}
 				</div>
 
@@ -65,7 +65,7 @@
 	<!-- LAST 30 DAYS -->
 	<!-- ----------------------------------------------- -->
 	<div class="mt-10">
-		<div class="text-xl">Last 30 Days</div>
+		<div class="text-xl mb-2">Last 30 Days</div>
 
 		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
 			{#each data.last_30_days.data as day}
