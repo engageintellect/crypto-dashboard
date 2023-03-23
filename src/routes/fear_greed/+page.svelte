@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Card from '$lib/components/Card.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 
@@ -15,37 +16,35 @@
 	<div class="text-xl mt-10">Today</div>
 
 	<div class="card">
-		<div class="card-body bg-base-300 my-2">
-			<div class="flex justify-between items-center text-lg md:text-xlg lg:text-2xl">
-				<div class="bg-neutral py-1 px-2 rounded-full">
-					{fear_greed}/100
-				</div>
+		<div class="my-2">
+			<div
+				class="flex uppercase justify-between h-24 gap-2 sm:gap-5 items-center text-lg md:text-xlg lg:text-2xl"
+			>
+				<Card classification="{fear_greed}/100" bg_color="bg-base-100" />
 
-				<div class="uppercase">
-					{#if fear_greed_classification === 'Extreme Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
-					{:else if fear_greed_classification === 'Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
-					{:else if fear_greed_classification === 'Extreme Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
-					{:else if fear_greed_classification === 'Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
-					{:else}
-						<span class="bg-amber-600 rounded-full py-1 px-2">{fear_greed_classification}</span>
-					{/if}
-				</div>
+				{#if fear_greed_classification === 'Extreme Fear'}
+					<Card classification="Extreme Fear" bg_color="bg-red-900" emoji="😨" />
+				{:else if fear_greed_classification === 'Fear'}
+					<Card classification="Fear" bg_color="bg-red-600" emoji="😱" />
+				{:else if fear_greed_classification === 'Neutral'}
+					<Card classification="Neutral" bg_color="bg-amber-600" emoji="😑" />
+				{:else if fear_greed_classification === 'Greed'}
+					<Card classification="Greed" bg_color="bg-emerald-600" emoji="🤑" />
+				{:else if fear_greed_classification === 'Extreme Greed'}
+					<Card classification="Extreme Greed" bg_color="bg-emerald-900" emoji="🤪" />
+				{/if}
 
-				<div class="">
+				<div class="bg-green-200 w-full h-full shadow-md">
 					{#if fear_greed_classification === 'Extreme Fear'}
-						<span class="bg-emerald-900 rounded-full py-1 px-2">BUY</span>
+						<Card classification="buy" bg_color="bg-emerald-900" emoji="💰" />
 					{:else if fear_greed_classification === 'Fear'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">BUY</span>
+						<Card classification="buy" bg_color="bg-emerald-600" emoji="🪙" />
 					{:else if fear_greed_classification === 'Neutral'}
-						<span class="bg-amber-600 rounded-full py-1 px-2">HOLD</span>
+						<Card classification="hold" bg_color="bg-amber-600" emoji="⏳" />
 					{:else if fear_greed_classification === 'Greed'}
-						<span class="bg-red-600 rounded-full py-1 px-2">HOLD</span>
+						<Card classification="hold" bg_color="bg-red-600" emoji="⌛" />
 					{:else if fear_greed_classification === 'Extreme Greed'}
-						<span class="bg-red-900 rounded-full py-1 px-2">SELL</span>
+						<Card classification="sell" bg_color="bg-red-900" emoji="🏧" />
 					{/if}
 				</div>
 			</div>
