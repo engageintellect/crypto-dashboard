@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import BitcoinChart from '$lib/components/BitcoinChart.svelte';
-
 	export let data: PageData;
+
+	import BitcoinChart from '$lib/components/BitcoinChart.svelte';
 
 	const fear_greed = data.fear.data[0].value;
 	const fear_greed_classification = data.fear.data[0].value_classification;
