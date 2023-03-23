@@ -2,8 +2,8 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 
-	const fear_greed = data.fng.data[0].value;
-	const fear_greed_classification = data.fng.data[0].value_classification;
+	const fear_greed = data.last_30_days.data[0].value;
+	const fear_greed_classification = data.last_30_days.data[0].value_classification;
 </script>
 
 <div class="px-2">
@@ -20,6 +20,7 @@
 				<div class="bg-neutral py-1 px-2 rounded-full">
 					{fear_greed}/100
 				</div>
+
 				<div class="uppercase">
 					{#if fear_greed_classification === 'Extreme Fear'}
 						<span class="bg-emerald-600 rounded-full py-1 px-2">{fear_greed_classification}😱</span>
@@ -35,19 +36,17 @@
 				</div>
 
 				<div class="">
-					{#each data.fng.data as day}
-						{#if day.value_classification === 'Extreme Fear'}
-							<span class="bg-emerald-900 rounded-full py-1 px-2">BUY</span>
-						{:else if day.value_classification === 'Fear'}
-							<span class="bg-emerald-600 rounded-full py-1 px-2">ADD</span>
-						{:else if day.value_classification === 'Neutral'}
-							<span class="bg-amber-600 rounded-full py-1 px-2">HOLD</span>
-						{:else if day.value_classification === 'Greed'}
-							<span class="bg-red-600 rounded-full py-1 px-2">HOLD</span>
-						{:else if day.value_classification === 'Extreme Greed'}
-							<span class="bg-red-900 rounded-full py-1 px-2">SELL</span>
-						{/if}
-					{/each}
+					{#if fear_greed_classification === 'Extreme Fear'}
+						<span class="bg-emerald-900 rounded-full py-1 px-2">BUY</span>
+					{:else if fear_greed_classification === 'Fear'}
+						<span class="bg-emerald-600 rounded-full py-1 px-2">BUY</span>
+					{:else if fear_greed_classification === 'Neutral'}
+						<span class="bg-amber-600 rounded-full py-1 px-2">HOLD</span>
+					{:else if fear_greed_classification === 'Greed'}
+						<span class="bg-red-600 rounded-full py-1 px-2">HOLD</span>
+					{:else if fear_greed_classification === 'Extreme Greed'}
+						<span class="bg-red-900 rounded-full py-1 px-2">SELL</span>
+					{/if}
 				</div>
 			</div>
 		</div>
@@ -57,6 +56,7 @@
 		<a href="/about"> What is the Fear & Greed Index?</a>
 	</div>
 
+	<!-- TODO: is this needed? -->
 	<!-- ----------------------------------------------- -->
 	<!-- LAST 7 DAYS -->
 	<!-- ----------------------------------------------- -->
@@ -83,7 +83,7 @@
 						{#if day.value_classification === 'Extreme Fear'}
 							<span class="bg-emerald-900 rounded-full py-1 px-2">BUY</span>
 						{:else if day.value_classification === 'Fear'}
-							<span class="bg-emerald-600 rounded-full py-1 px-2">ADD</span>
+							<span class="bg-emerald-600 rounded-full py-1 px-2">BUY</span>
 						{:else if day.value_classification === 'Neutral'}
 							<span class="bg-amber-600 rounded-full py-1 px-2">HOLD</span>
 						{:else if day.value_classification === 'Greed'}
@@ -91,7 +91,6 @@
 						{:else if day.value_classification === 'Extreme Greed'}
 							<span class="bg-red-900 rounded-full py-1 px-2">SELL</span>
 						{/if}
-						<!-- {day.value_classification} -->
 					</div>
 
 					<div>

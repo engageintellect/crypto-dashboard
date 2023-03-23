@@ -6,16 +6,6 @@
 
 	const fear_greed = data.fear.data[0].value;
 	const fear_greed_classification = data.fear.data[0].value_classification;
-
-	const whatToDO = () => {
-		if (fear_greed < 20) {
-			return 'BUY🚀';
-		} else if (fear_greed > 80) {
-			return 'SELL📉';
-		} else {
-			return 'HOLD🕜';
-		}
-	};
 </script>
 
 <div class="bg-base-300 shadow-lg min-h-screen">
@@ -32,7 +22,7 @@
 			</div>
 
 			<div
-				class="text-lg lg:text-xl text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-end"
+				class="text-lg lg:text-xl text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-center"
 			>
 				<div class="hidden lg:flex">
 					{fear_greed}/100
@@ -42,12 +32,16 @@
 				</div>
 
 				<div>
-					{#if whatToDO() === 'BUY🚀'}
-						<span class="bg-emerald-600 rounded-full py-1 px-2">{whatToDO()}</span>
-					{:else if whatToDO() === 'SELL📉'}
-						<span class="bg-red-600 rounded-full py-1 px-2">{whatToDO()}</span>
-					{:else}
-						<span class=" bg-amber-600 rounded-full py-1 px-2">{whatToDO()}</span>
+					{#if fear_greed_classification === 'Extreme Fear'}
+						<div class="bg-emerald-900 rounded-full py-1 px-2">BUY</div>
+					{:else if fear_greed_classification === 'Fear'}
+						<div class="bg-emerald-600 rounded-full py-1 px-2">BUY</div>
+					{:else if fear_greed_classification === 'Neutral'}
+						<div class="bg-amber-600 rounded-full py-1 px-2">HOLD</div>
+					{:else if fear_greed_classification === 'Greed'}
+						<div class="bg-red-600 rounded-full py-1 px-2">HOLD</div>
+					{:else if fear_greed_classification === 'Extreme Greed'}
+						<div class="bg-red-900 rounded-full py-1 px-2">SELL</div>
 					{/if}
 				</div>
 			</div>
