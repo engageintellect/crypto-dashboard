@@ -1,11 +1,19 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	export let data: PageData;
-
 	import BitcoinChart from '$lib/components/BitcoinChart.svelte';
+	export let data: PageData;
+	let up_today: boolean;
 
 	const fear_greed = data.fear.data[0].value;
 	const fear_greed_classification = data.fear.data[0].value_classification;
+
+	if (JSON.stringify(data.btc) > JSON.stringify(data.btc_yesterday)) {
+		up_today = true;
+	} else {
+		up_today = false;
+	}
+
+	console.log(up_today);
 </script>
 
 <div class="bg-base-300 shadow-lg min-h-screen">
@@ -15,7 +23,7 @@
 				<div class="text-xl text-base-content lg:text-2xl font-semibold">BTC/USD</div>
 
 				<!-- //TODO: SHOW IF PRICE IS UP OR DOWN SINCE PREVIOUS DAY -->
-				<div class="text-4xl font-extrabold text-primary">
+				<div class="text-4xl font-extrabold {!up_today ? 'text-green-600' : 'text-red-600'}">
 					<span> $ </span>
 					{data.btc.last_trade_price.toLocaleString()}
 				</div>
