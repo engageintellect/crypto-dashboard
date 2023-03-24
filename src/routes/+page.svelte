@@ -24,26 +24,28 @@
 			<div
 				class="text-lg lg:text-xl text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-center"
 			>
-				<div class="hidden lg:flex">
-					{fear_greed}/100
-				</div>
-				<div class="hidden lg:flex">
-					{fear_greed_classification}
-				</div>
+				<a href="/fear_greed" class="flex items-center gap-5">
+					<div class="hidden lg:flex">
+						{fear_greed}/100
+					</div>
+					<div class="hidden lg:flex">
+						{fear_greed_classification}
+					</div>
 
-				<div>
-					{#if fear_greed_classification === 'Extreme Fear'}
-						<div class="bg-emerald-900 rounded-full py-1 px-2">BUY</div>
-					{:else if fear_greed_classification === 'Fear'}
-						<div class="bg-emerald-600 rounded-full py-1 px-2">BUY</div>
-					{:else if fear_greed_classification === 'Neutral'}
-						<div class="bg-amber-600 rounded-full py-1 px-2">HOLD</div>
-					{:else if fear_greed_classification === 'Greed'}
-						<div class="bg-red-600 rounded-full py-1 px-2">HOLD</div>
-					{:else if fear_greed_classification === 'Extreme Greed'}
-						<div class="bg-red-900 rounded-full py-1 px-2">SELL</div>
-					{/if}
-				</div>
+					<div>
+						{#if fear_greed_classification === 'Extreme Fear'}
+							<div class="bg-emerald-900 rounded-full py-1 px-2">BUY</div>
+						{:else if fear_greed_classification === 'Fear'}
+							<div class="bg-emerald-600 rounded-full py-1 px-2">BUY</div>
+						{:else if fear_greed_classification === 'Neutral'}
+							<div class="bg-amber-600 rounded-full py-1 px-2">HOLD</div>
+						{:else if fear_greed_classification === 'Greed'}
+							<div class="bg-red-600 rounded-full py-1 px-2">HOLD</div>
+						{:else if fear_greed_classification === 'Extreme Greed'}
+							<div class="bg-red-900 rounded-full py-1 px-2">SELL</div>
+						{/if}
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
