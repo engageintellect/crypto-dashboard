@@ -7,17 +7,19 @@
 		<script class="border-lg" type="text/javascript">
 			new TradingView.widget({
 				autosize: true,
-				symbol: 'BNC:BLX',
-				interval: 'W',
+				symbol: 'BITSTAMP:BTCUSD',
+				interval: 'D',
 				timezone: 'Etc/UTC',
 				theme: 'dark',
 				style: '1',
 				locale: 'en',
+				details: false,
+				// range: '3M',
 				toolbar_bg: '#f1f3f6',
 				enable_publishing: false,
 				hide_side_toolbar: false,
 				allow_symbol_change: true,
-				studies: ['BB@tv-basicstudies', 'RSI@tv-basicstudies'],
+				studies: ['RSI@tv-basicstudies'],
 				container_id: 'tradingview_e91d2'
 			});
 		</script>
