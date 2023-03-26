@@ -1,5 +1,7 @@
 <script>
 	import Colors from '$lib/components/Colors.svelte';
+	import NewsFeed from '$lib/components/NewsFeed.svelte';
+	import TechnicalAnalysis from '$lib/components/TechnicalAnalysis.svelte';
 </script>
 
 <div class="flex  flex-col gap-5 text-base-content px-2">
