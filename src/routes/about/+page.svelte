@@ -1,4 +1,9 @@
+<script>
+	import Colors from '$lib/components/Colors.svelte';
+</script>
+
 <div class="flex  flex-col gap-5 text-base-content px-2">
+	<Colors />
 	<div class="text-4xl font-semibold text-neutral-content">About Fear & Greed:</div>
 
 	<div>
