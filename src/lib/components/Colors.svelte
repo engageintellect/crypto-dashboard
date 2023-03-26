@@ -1,6 +1,7 @@
 <div class="grid grid-cols-4">
 	<div class="bg-neutral w-full h-32">neutral</div>
 	<div class="bg-neutral-content w-full h-32">neutral-content</div>
+	<div class="bg-neutral-focus w-full h-32">neutral-focus</div>
 	<div class="bg-base-100 w-full h-32">base-100</div>
 	<div class="bg-base-200 w-full h-32">base-200</div>
 	<div class="bg-base-300 w-full h-32">base-300</div>
