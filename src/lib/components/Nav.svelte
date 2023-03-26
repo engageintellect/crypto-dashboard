@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="navbar-center">
-		<a href="/" class="btn btn-ghost normal-case text-xl">Bitcoin</a>
+		<a href="/" class="normal-case text-2xl font-semibold">Bitcoin</a>
 	</div>
 	<div class="navbar-end">
 		<div class="w-7 hover:text-secondary transition-color duration-300 rounded-full">
