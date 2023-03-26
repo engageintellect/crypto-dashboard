@@ -24,11 +24,9 @@
 			<div>
 				<div class="text-xl text-base-content lg:text-2xl font-semibold">BTC/USD</div>
 
-				<!-- //TODO: SHOW IF PRICE IS UP OR DOWN SINCE PREVIOUS DAY -->
-
 				<div
 					class="text-4xl lg:text-5xl font-extrabold {up_today == 'neutral'
-						? 'text-blue-600'
+						? 'text-info'
 						: up_today == 'up'
 						? 'text-emerald-600'
 						: 'text-red-600'}"
