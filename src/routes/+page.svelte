@@ -15,8 +15,9 @@
 		up_today = 'down';
 	}
 
-	console.log({ today: JSON.stringify(data.today), yesterday: JSON.stringify(data.yesterday) });
-	console.log(`${up_today} today`);
+	// DEBUG
+	// console.log({ today: JSON.stringify(data.today), yesterday: JSON.stringify(data.yesterday) });
+	// console.log(`${up_today} today`);
 </script>
 
 <div class="bg-base-300 shadow-lg min-h-screen">

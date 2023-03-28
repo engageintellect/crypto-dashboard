@@ -6,7 +6,6 @@ export const load = (async ({ fetch }) => {
 	const yesterday = await btc.price_24h;
 	const today = await btc.last_trade_price;
 
-	console.log('hello world');
 	//! This API is often down.
 	// const btc_daily_res = await fetch(
 	// 	`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1&interval=daily`
