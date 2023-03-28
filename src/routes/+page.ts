@@ -16,5 +16,5 @@ export const load = (async ({ fetch }) => {
 	const fear_res = await fetch(`https://api.alternative.me/fng/?limit=1`);
 	const fear = await fear_res.json();
 
-	return { btc, yesterday, today, fear };
+	return { btc, today, yesterday, fear };
 }) satisfies PageLoad;
