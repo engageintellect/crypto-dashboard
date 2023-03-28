@@ -7,15 +7,16 @@
 	const fear_greed = data.fear.data[0].value;
 	const fear_greed_classification = data.fear.data[0].value_classification;
 
-	if (JSON.stringify(data.btc) > JSON.stringify(data.btc_yesterday)) {
+	if (JSON.stringify(data.today) > JSON.stringify(data.yesterday)) {
 		up_today = 'up';
-	} else if (JSON.stringify(data.btc) == JSON.stringify(data.btc_yesterday)) {
+	} else if (JSON.stringify(data.today) == JSON.stringify(data.yesterday)) {
 		up_today = 'neutral';
 	} else {
 		up_today = 'down';
 	}
 
-	console.log(up_today);
+	console.log({ today: JSON.stringify(data.today), yesterday: JSON.stringify(data.yesterday) });
+	console.log(`${up_today} today`);
 </script>
 
 <div class="bg-base-300 shadow-lg min-h-screen">
