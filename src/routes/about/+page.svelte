@@ -42,13 +42,13 @@
 			</tr>
 
 			<tr>
-				<td>50</td>
+				<td>50-55</td>
 				<td class="bg-amber-600">NEUTRAL</td>
 				<td class="font-bold">HOLD</td>
 			</tr>
 
 			<tr>
-				<td>50-75</td>
+				<td>55-75</td>
 				<td class="bg-red-600">GREED</td>
 				<td class="font-bold">HOLD</td>
 			</tr>
