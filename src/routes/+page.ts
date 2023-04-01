@@ -5,6 +5,7 @@ export const load = (async ({ fetch }) => {
 	const btc = await btc_res.json();
 	const yesterday = await btc.price_24h;
 	const today = await btc.last_trade_price;
+	const volume = await btc.volume_24h;
 
 	//! This API is often down.
 	// const btc_daily_res = await fetch(
@@ -16,5 +17,5 @@ export const load = (async ({ fetch }) => {
 	const fear_res = await fetch(`https://api.alternative.me/fng/?limit=1`);
 	const fear = await fear_res.json();
 
-	return { btc, today, yesterday, fear };
+	return { btc, today, yesterday, volume, fear };
 }) satisfies PageLoad;

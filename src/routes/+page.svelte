@@ -36,6 +36,7 @@
 					<span> $ </span>
 					{data.btc.last_trade_price.toLocaleString()}
 				</div>
+				<div class="font-thin">Volume: {data.volume.toLocaleString()}</div>
 			</div>
 
 			<div
@@ -51,15 +52,15 @@
 
 					<div>
 						{#if fear_greed_classification === 'Extreme Fear'}
-							<div class="bg-emerald-900 rounded-full py-1 px-2">BUY</div>
+							<div class="bg-emerald-900 rounded-full py-1 px-2">BUY 🚀</div>
 						{:else if fear_greed_classification === 'Fear'}
-							<div class="bg-emerald-600 rounded-full py-1 px-2">BUY</div>
+							<div class="bg-emerald-600 rounded-full py-1 px-2">BUY 🚀</div>
 						{:else if fear_greed_classification === 'Neutral'}
-							<div class="bg-amber-600 rounded-full py-1 px-2">HOLD</div>
+							<div class="bg-amber-600 rounded-full py-1 px-2">HOLD 🕜</div>
 						{:else if fear_greed_classification === 'Greed'}
-							<div class="bg-red-600 rounded-full py-1 px-2">HOLD</div>
+							<div class="bg-red-600 rounded-full py-1 px-2">HOLD 🕐</div>
 						{:else if fear_greed_classification === 'Extreme Greed'}
-							<div class="bg-red-900 rounded-full py-1 px-2">SELL</div>
+							<div class="bg-red-900 rounded-full py-1 px-2">SELL 💰</div>
 						{/if}
 					</div>
 				</a>
