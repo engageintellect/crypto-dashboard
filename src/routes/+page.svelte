@@ -36,7 +36,7 @@
 					<span> $ </span>
 					{data.btc.last_trade_price.toLocaleString()}
 				</div>
-				<div class="font-thin">Volume: {data.volume.toLocaleString()}</div>
+				<div class="font-thin"><strong>Volume:</strong> {data.volume.toLocaleString()}</div>
 			</div>
 
 			<div
