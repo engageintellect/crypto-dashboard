@@ -8,11 +8,14 @@
 
 	const fear_greed = data.last_30_days.data[0].value;
 	const fear_greed_classification = data.last_30_days.data[0].value_classification;
+	let chart_times = data.chart_times.reverse();
+	let chart_values = data.chart_values.reverse();
+
 	let chart_data = {
-		labels: data.chart_times,
+		labels: chart_times,
 		datasets: [
 			{
-				values: data.chart_values
+				values: chart_values
 			}
 		]
 	};
@@ -72,7 +75,7 @@
 	<div class="mt-10">
 		<div class="text-xl mb-2">Last 30 Days</div>
 		<div class="hidden md:block md:mb-10">
-			<Chart type="line" data={chart_data} colors={[tw.slate[100], tw.red[600]]} height={333} />
+			<Chart type="bar" data={chart_data} colors={[tw.emerald[600], tw.red[600]]} height={333} />
 		</div>
 
 		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
