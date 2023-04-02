@@ -1,8 +1,11 @@
 <script lang="ts">
-	import Chart from 'svelte-frappe-charts';
 	import Card from '$lib/components/Card.svelte';
 	import type { PageData } from './$types';
 	import tw from 'tailwindcss/colors';
+
+	//TODO: fix this
+	// @ts-ignore
+	import Chart from 'svelte-frappe-charts';
 
 	export let data: PageData;
 
@@ -10,6 +13,7 @@
 	const fear_greed_classification = data.last_30_days.data[0].value_classification;
 	let chart_times = data.chart_times.reverse();
 	let chart_values = data.chart_values.reverse();
+	// let chart_classification = data.chart_classification.reverse();
 
 	let chart_data = {
 		labels: chart_times,
