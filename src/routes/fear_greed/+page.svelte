@@ -71,11 +71,11 @@
 	<!-- ----------------------------------------------- -->
 	<div class="mt-10">
 		<div class="text-xl mb-2">Last 30 Days</div>
-		<div class="">
-			<Chart type="bar" data={chart_data} colors={[tw.emerald[600], tw.red[600]]} />
+		<div class="hidden md:block md:mb-10">
+			<Chart type="line" data={chart_data} colors={[tw.slate[100], tw.red[600]]} height={333} />
 		</div>
 
-		<div class="grid mt-10 grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
+		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
 			{#each data.last_30_days.data as day}
 				<div class="flex flex-col bg-base-100 p-2 gap-2 shadow-md justify-center items-center">
 					<div class="font-thin text-sm">
