@@ -8,9 +8,6 @@
 
 	const fear_greed = data.last_30_days.data[0].value;
 	const fear_greed_classification = data.last_30_days.data[0].value_classification;
-
-	// console.log(data.chart_values, data.chart_time);
-
 	let chart_data = {
 		labels: data.chart_times,
 		datasets: [
@@ -19,14 +16,10 @@
 			}
 		]
 	};
-
-	const chart_colors = [tw.emerald[500], tw.red[500]];
 </script>
 
 <div class="px-2">
 	<div class="text-4xl">Fear & Greed</div>
-
-	<!-- {JSON.stringify(chart_data)} -->
 
 	<!-- ----------------------------------------------- -->
 	<!-- TODAY -->
@@ -73,14 +66,16 @@
 		<a href="/about"> What is the Fear & Greed Index?</a>
 	</div>
 
-	<Chart type="bar" title="Fear & Greed" data={chart_data} colors={chart_colors} />
 	<!-- ----------------------------------------------- -->
 	<!-- LAST 30 DAYS -->
 	<!-- ----------------------------------------------- -->
 	<div class="mt-10">
 		<div class="text-xl mb-2">Last 30 Days</div>
+		<div class="">
+			<Chart type="bar" data={chart_data} colors={[tw.emerald[600], tw.red[600]]} />
+		</div>
 
-		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
+		<div class="grid mt-10 grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
 			{#each data.last_30_days.data as day}
 				<div class="flex flex-col bg-base-100 p-2 gap-2 shadow-md justify-center items-center">
 					<div class="font-thin text-sm">
