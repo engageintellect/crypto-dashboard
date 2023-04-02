@@ -1,14 +1,32 @@
 <script lang="ts">
+	import Chart from 'svelte-frappe-charts';
 	import Card from '$lib/components/Card.svelte';
 	import type { PageData } from './$types';
+	import tw from 'tailwindcss/colors';
+
 	export let data: PageData;
 
 	const fear_greed = data.last_30_days.data[0].value;
 	const fear_greed_classification = data.last_30_days.data[0].value_classification;
+
+	// console.log(data.chart_values, data.chart_time);
+
+	let chart_data = {
+		labels: data.chart_times,
+		datasets: [
+			{
+				values: data.chart_values
+			}
+		]
+	};
+
+	const chart_colors = [tw.emerald[500], tw.red[500]];
 </script>
 
 <div class="px-2">
 	<div class="text-4xl">Fear & Greed</div>
+
+	<!-- {JSON.stringify(chart_data)} -->
 
 	<!-- ----------------------------------------------- -->
 	<!-- TODAY -->
@@ -55,6 +73,7 @@
 		<a href="/about"> What is the Fear & Greed Index?</a>
 	</div>
 
+	<Chart type="bar" title="Fear & Greed" data={chart_data} colors={chart_colors} />
 	<!-- ----------------------------------------------- -->
 	<!-- LAST 30 DAYS -->
 	<!-- ----------------------------------------------- -->
