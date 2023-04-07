@@ -33,6 +33,7 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^2.46.1",
+		"svelte-frappe-charts": "^1.10.0",
 		"svelte-icons": "^2.1.0"
 	}
 }

@@ -20,7 +20,7 @@
 	// console.log(`${up_today} today`);
 </script>
 
-<div class="bg-base-300 shadow-lg min-h-screen">
+<div class="bg-base-300 shadow-lg min-h-screen rounded-md">
 	<div class="p-4">
 		<div class="flex justify-between items-center">
 			<div>

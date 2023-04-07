@@ -3,7 +3,7 @@
 	import FaBars from 'svelte-icons/fa/FaBars.svelte';
 </script>
 
-<div class="px-2 lg:px-6 navbar bg-base-300 sticky top-0 z-20 text-base-content">
+<div class="px-2 lg:px-6 navbar bg-base-300 shadow-md sticky top-0 z-20 text-base-content">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -17,12 +17,17 @@
 				</div>
 			</label>
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-			<ul tabindex="0" class="menu menu-compact dropdown-content mt-7 p-2 shadow bg-base-300 w-52">
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/fear_greed">Fear & Greed</a></li>
-				<li><a href="/news">News</a></li>
-				<li><a href="/posts">Posts</a></li>
+			<ul
+				tabindex="0"
+				class="menu menu-compact dropdown-content mt-7 p-2 shadow-lg bg-base-300 w-52 rounded-md"
+			>
+				<li>
+					<a class="hover:bg-base-200" href="/">Home</a>
+				</li>
+				<li><a class="hover:bg-base-200" href="/about">About</a></li>
+				<li><a class="hover:bg-base-200" href="/fear_greed">Fear & Greed</a></li>
+				<li><a class="hover:bg-base-200" href="/news">News</a></li>
+				<li><a class="hover:bg-base-200" href="/posts">Posts</a></li>
 			</ul>
 		</div>
 	</div>

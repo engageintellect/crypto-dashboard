@@ -7,7 +7,7 @@
 <div
 	class="{bg_color
 		? bg_color
-		: ''} py-1 px-2 w-full h-full flex justify-center items-center shadow-md"
+		: ''} py-1 px-2 w-full h-full flex justify-center font-semibold items-center shadow-md rounded-md"
 >
 	{classification}<span class="flex text-2xl sm:text-4xl">{emoji ? emoji : ''}</span>
 </div>
