@@ -32,7 +32,7 @@
 	<!-- TODAY -->
 	<!-- ----------------------------------------------- -->
 
-	<div class="bg-base-300 p-4  mt-5">
+	<div class="bg-base-300 p-2 lg:p-4 rounded-md mt-5">
 		<div class="text-xl">Today</div>
 
 		<div class="card">
@@ -54,7 +54,7 @@
 						<Card classification="Extreme Greed" bg_color="bg-emerald-900" emoji="🤪" />
 					{/if}
 
-					<div class="bg-green-200 w-full h-full shadow-md">
+					<div class="w-full h-full">
 						{#if fear_greed_classification === 'Extreme Fear'}
 							<Card classification="buy" bg_color="bg-emerald-900" emoji="💰" />
 						{:else if fear_greed_classification === 'Fear'}
@@ -95,7 +95,9 @@
 
 			<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
 				{#each data.last_30_days.data as day}
-					<div class="flex flex-col bg-base-100 p-2 gap-2 shadow-md justify-center items-center">
+					<div
+						class="flex flex-col bg-base-100 p-2 gap-2 shadow-md justify-center items-center rounded-md"
+					>
 						<div class="font-thin text-sm">
 							{new Date(day.timestamp * 1000).toLocaleDateString('en-US', {
 								weekday: 'short',
