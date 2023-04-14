@@ -79,7 +79,25 @@
 		<!-- LAST 30 DAYS -->
 		<!-- ----------------------------------------------- -->
 		<div class="mt-10">
-			<div class="text-xl mb-2">Last 30 Days</div>
+			{#if Number(data.percent_change) > 0}
+				<div class="text-xl mb-2">
+					Last 30 Days: <span class="text-emerald-600 text-2xl font-semibold"
+						>+{data.percent_change}%</span
+					>
+				</div>
+			{:else if Number(data.percent_change) < 0}
+				<div class="text-xl mb-2">
+					Last 30 Days: <span class="text-red-600 text-2xl font-semibold"
+						>{data.percent_change}%</span
+					>
+				</div>
+			{:else if Number(data.percent_change) === 0}
+				<div class="text-xl mb-2">
+					Last 30 Days: <span class="text-amber-600 text-2xl font-semibold"
+						>{data.percent_change}%</span
+					>
+				</div>
+			{/if}
 			<div class="hidden md:block md:mb-10">
 				<Chart
 					type="bar"
