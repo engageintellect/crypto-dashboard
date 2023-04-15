@@ -79,25 +79,32 @@
 		<!-- LAST 30 DAYS -->
 		<!-- ----------------------------------------------- -->
 		<div class="mt-10">
-			{#if Number(data.percent_change) > 0}
+			<div class="flex flex-col sm:flex-row justify-start sm:gap-5">
+				{#if Number(data.percent_change) > 0}
+					<div class="text-xl mb-2">
+						Last 30 Days: <span class="text-emerald-600 text-2xl font-semibold"
+							>+{data.percent_change}%</span
+						>
+					</div>
+				{:else if Number(data.percent_change) < 0}
+					<div class="text-xl mb-2">
+						Last 30 Days: <span class="text-red-600 text-2xl font-semibold"
+							>{data.percent_change}%</span
+						>
+					</div>
+				{:else if Number(data.percent_change) === 0}
+					<div class="text-xl mb-2">
+						Last 30 Days: <span class="text-amber-600 text-2xl font-semibold"
+							>{data.percent_change}%</span
+						>
+					</div>
+				{/if}
+
 				<div class="text-xl mb-2">
-					Last 30 Days: <span class="text-emerald-600 text-2xl font-semibold"
-						>+{data.percent_change}%</span
-					>
+					Median: <span class="text-2xl font-semibold">{data.median}</span>
 				</div>
-			{:else if Number(data.percent_change) < 0}
-				<div class="text-xl mb-2">
-					Last 30 Days: <span class="text-red-600 text-2xl font-semibold"
-						>{data.percent_change}%</span
-					>
-				</div>
-			{:else if Number(data.percent_change) === 0}
-				<div class="text-xl mb-2">
-					Last 30 Days: <span class="text-amber-600 text-2xl font-semibold"
-						>{data.percent_change}%</span
-					>
-				</div>
-			{/if}
+			</div>
+
 			<div class="hidden md:block md:mb-10">
 				<Chart
 					type="bar"

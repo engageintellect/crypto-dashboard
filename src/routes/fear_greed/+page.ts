@@ -13,9 +13,40 @@ export const load = (async ({ fetch }) => {
 	const percent_change_raw = ((day_1 - day_30) / day_30) * 100;
 	const percent_change = percent_change_raw.toFixed(2);
 
-	console.log('percent change is', percent_change);
+	console.log(last_30_days.data);
 
-	chart_times = last_30_days.data.map((item: { timestamp: any }) => {
+	interface Data {
+		value: number;
+	}
+
+	// Extract property values from each object in last_30_days array and convert to numbers
+	const numericValues = last_30_days.data.map((obj: Data) => Number(obj.value));
+
+	// Function to calculate median
+	function calculateMedian(arr: number[]): number {
+		// Sort the array in ascending order
+		const sortedArr = arr.sort((a, b) => a - b);
+
+		// Find the middle index
+		const middleIndex = Math.floor(sortedArr.length / 2);
+
+		// If the array has an odd number of elements, return the middle value
+		if (sortedArr.length % 2 !== 0) {
+			return sortedArr[middleIndex];
+		} else {
+			// If the array has an even number of elements, return the average of the two middle values
+			return (sortedArr[middleIndex - 1] + sortedArr[middleIndex]) / 2;
+		}
+	}
+
+	// Calculate the median of the extracted numeric data values
+	const median = calculateMedian(numericValues);
+
+	// console.log('Median Value: ', median);
+
+	// console.log('percent change is', percent_change);
+
+	chart_times = last_30_days.data.map((item: { timestamp: number }) => {
 		return new Date(item.timestamp * 1000).toLocaleDateString('en-US', {
 			weekday: 'short',
 			year: '2-digit',
@@ -33,5 +64,5 @@ export const load = (async ({ fetch }) => {
 		return item.value_classification;
 	});
 
-	return { last_30_days, chart_values, chart_times, chart_classification, percent_change };
+	return { last_30_days, chart_values, chart_times, chart_classification, percent_change, median };
 }) satisfies PageLoad;
