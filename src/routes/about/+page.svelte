@@ -119,7 +119,7 @@
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 			<div class="bg-base-300 rounded-md shadow-md p-4">
-				<div class="text-2xl font-semibold text-neutral-content">Volatility (25 %)</div>
+				<div class="text-2xl font-semibold text-neutral-content pb-2">Volatility (25 %)</div>
 				<div>
 					We’re measuring the current volatility and max. drawdowns of bitcoin and compare it with
 					the corresponding average values of the last 30 days and 90 days. We argue that an unusual
@@ -128,7 +128,7 @@
 			</div>
 
 			<div class="bg-base-300 rounded-md shadow-md p-4">
-				<div class="text-2xl font-semibold text-neutral-content">Market Momentum (25%)</div>
+				<div class="text-2xl font-semibold text-neutral-content pb-2">Market Momentum (25%)</div>
 				<div>
 					Also, we’re measuring the current volume and market momentum (again in comparison with the
 					last 30/90 day average values) and put those two values together. Generally, when we see
@@ -137,7 +137,7 @@
 				</div>
 			</div>
 			<div class="bg-base-300 rounded-md shadow-md p-4">
-				<div class="text-2xl font-semibold text-neutral-content">Social Media (15%)</div>
+				<div class="text-2xl font-semibold text-neutral-content pb-2">Social Media (15%)</div>
 				<div>
 					While our reddit sentiment analysis is still not in the live index (we’re still
 					experimenting some market-related key words in the text processing algorithm), our twitter
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 			<div class="bg-base-300 rounded-md shadow-md p-4">
-				<div class="text-2xl font-semibold text-neutral-content">Surveys (15%)</div>
+				<div class="text-2xl font-semibold text-neutral-content pb-2">Surveys (15%)</div>
 				<div>
 					currently paused Together with strawpoll.com (disclaimer: we own this site, too), quite a
 					large public polling platform, we’re conducting weekly crypto polls and ask people how
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 			<div class="bg-base-300 rounded-md shadow-md p-4">
-				<div class="text-2xl font-semibold text-neutral-content">Dominance (10%)</div>
+				<div class="text-2xl font-semibold text-neutral-content pb-2">Dominance (10%)</div>
 				<div>
 					The dominance of a coin resembles the market cap share of the whole crypto market.
 					Especially for Bitcoin, we think that a rise in Bitcoin dominance is caused by a fear of
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 			<div class="bg-base-300 rounded-md shadow-md p-4">
-				<div class="text-2xl font-semibold text-neutral-content">Trends (10%)</div>
+				<div class="text-2xl font-semibold text-neutral-content pb-2">Trends (10%)</div>
 				<div>
 					We pull Google Trends data for various Bitcoin related search queries and crunch those
 					numbers, especially the change of search volumes as well as recommended other currently
