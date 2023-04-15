@@ -39,7 +39,7 @@
 		<div class="card">
 			<div class="my-2">
 				<div
-					class="flex uppercase justify-between h-24 gap-2 sm:gap-5 items-center text-lg md:text-xlg lg:text-2xl"
+					class="flex uppercase justify-center h-24 gap-2 sm:gap-5 items-center text-lg md:text-xlg lg:text-2xl"
 				>
 					<Card classification="{fear_greed}/100" bg_color="bg-base-100" />
 
@@ -79,45 +79,47 @@
 		<!-- ----------------------------------------------- -->
 		<!-- LAST 30 DAYS -->
 		<!-- ----------------------------------------------- -->
+
 		<div class="mt-10">
-			<div class="flex flex-col sm:flex-row sm:gap-5">
-				<div class="text-xl mb-2 text-neutral bg-base-200 p-2 rounded-md w-full sm:mb-5 shadow-md">
-					<div class="text-xl mb-2 text-base-content">Last 30 days:</div>
-
-					<div class="flex gap-5">
-						{#if Number(data.percent_change) > 0}
-							<div class="text-lg mb-2 text-neutral">
-								Change: <span class="text-emerald-500 text-xl font-semibold"
-									>+{data.percent_change}%</span
-								>
-							</div>
-						{:else if Number(data.percent_change) < 0}
-							<div class="text-lg mb-2 text-neutral">
-								Last 30 Days: <span class="text-red-500 text-xl font-semibold"
-									>{data.percent_change}%</span
-								>
-							</div>
-						{:else if Number(data.percent_change) === 0}
-							<div class="text-lg mb-2 text-neutral">
-								Last 30 Days: <span class="text-amber-500 text-xl font-semibold"
-									>{data.percent_change}%</span
-								>
-							</div>
-						{/if}
-
-						<div class="text-lg mb-2 text-neutral">
-							Median: <span class="text-xl font-semibold text-base-content">{data.median}</span>
+			<div class="text-xl mb-2 text-base-content">Last 30 days:</div>
+			<div class="flex gap-2 sm:gap-5">
+				<div class="w-full bg-base-200 rounded-md p-2 flex items-center justify-center">
+					{#if Number(data.percent_change) > 0}
+						<div class="text-lg mb-2 text-neutral flex flex-col sm:flex-row sm:gap-2">
+							Change: <span class="text-emerald-500 text-xl font-semibold"
+								>+{data.percent_change}%</span
+							>
 						</div>
-
-						<div class="text-lg mb-2 text-neutral">
-							Range: <span class="text-xl font-semibold text-base-content">
-								{data.min}-{data.max}
-							</span>
+					{:else if Number(data.percent_change) < 0}
+						<div class="text-lg mb-2 text-neutral flex-col sm:flex-row sm:gap-2">
+							Last 30 Days: <span class="text-red-500 text-xl font-semibold"
+								>{data.percent_change}%</span
+							>
 						</div>
+					{:else if Number(data.percent_change) === 0}
+						<div class="text-lg mb-2 text-neutral flex-col sm:flex-row sm:gap-2">
+							Last 30 Days: <span class="text-amber-500 text-xl font-semibold"
+								>{data.percent_change}%</span
+							>
+						</div>
+					{/if}
+				</div>
+				<div class="w-full bg-base-200 rounded-md p-2 flex justify-center items-center">
+					<div class="text-lg mb-2 text-neutral flex flex-col sm:flex-row sm:gap-2">
+						Median: <span class="text-xl font-semibold text-base-content">{data.median}</span>
+					</div>
+				</div>
+				<div class="w-full bg-base-200 rounded-md p-2 flex justify-center items-center">
+					<div class="text-lg mb-2 text-neutral flex flex-col sm:flex-row sm:gap-2">
+						Range: <span class="text-xl font-semibold text-base-content">
+							{data.min}-{data.max}
+						</span>
 					</div>
 				</div>
 			</div>
+		</div>
 
+		<div class="mt-10">
 			<!-- <Colors /> -->
 
 			<div class="hidden md:block md:mb-10">
