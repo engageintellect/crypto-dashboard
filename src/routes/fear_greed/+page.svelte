@@ -6,6 +6,7 @@
 	//TODO: fix this
 	// @ts-ignore
 	import Chart from 'svelte-frappe-charts';
+	import Colors from '$lib/components/Colors.svelte';
 
 	export let data: PageData;
 
@@ -79,31 +80,45 @@
 		<!-- LAST 30 DAYS -->
 		<!-- ----------------------------------------------- -->
 		<div class="mt-10">
-			<div class="flex flex-col sm:flex-row justify-start sm:gap-5">
-				{#if Number(data.percent_change) > 0}
-					<div class="text-xl mb-2">
-						Last 30 Days: <span class="text-emerald-600 text-2xl font-semibold"
-							>+{data.percent_change}%</span
-						>
-					</div>
-				{:else if Number(data.percent_change) < 0}
-					<div class="text-xl mb-2">
-						Last 30 Days: <span class="text-red-600 text-2xl font-semibold"
-							>{data.percent_change}%</span
-						>
-					</div>
-				{:else if Number(data.percent_change) === 0}
-					<div class="text-xl mb-2">
-						Last 30 Days: <span class="text-amber-600 text-2xl font-semibold"
-							>{data.percent_change}%</span
-						>
-					</div>
-				{/if}
+			<div class="flex flex-col sm:flex-row sm:gap-5">
+				<div class="text-xl mb-2 text-neutral bg-base-200 p-2 rounded-md w-full sm:mb-5 shadow-md">
+					<div class="text-xl mb-2 text-base-content">Last 30 days:</div>
 
-				<div class="text-xl mb-2">
-					Median: <span class="text-2xl font-semibold">{data.median}</span>
+					<div class="flex gap-5">
+						{#if Number(data.percent_change) > 0}
+							<div class="text-lg mb-2 text-neutral">
+								Change: <span class="text-emerald-500 text-xl font-semibold"
+									>+{data.percent_change}%</span
+								>
+							</div>
+						{:else if Number(data.percent_change) < 0}
+							<div class="text-lg mb-2 text-neutral">
+								Last 30 Days: <span class="text-red-500 text-xl font-semibold"
+									>{data.percent_change}%</span
+								>
+							</div>
+						{:else if Number(data.percent_change) === 0}
+							<div class="text-lg mb-2 text-neutral">
+								Last 30 Days: <span class="text-amber-500 text-xl font-semibold"
+									>{data.percent_change}%</span
+								>
+							</div>
+						{/if}
+
+						<div class="text-lg mb-2 text-neutral">
+							Median: <span class="text-xl font-semibold text-base-content">{data.median}</span>
+						</div>
+
+						<div class="text-lg mb-2 text-neutral">
+							Range: <span class="text-xl font-semibold text-base-content">
+								{data.min}-{data.max}
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
+
+			<!-- <Colors /> -->
 
 			<div class="hidden md:block md:mb-10">
 				<Chart

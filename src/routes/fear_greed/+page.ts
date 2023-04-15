@@ -3,6 +3,9 @@ import type { PageLoad } from './$types';
 let chart_values;
 let chart_times;
 let chart_classification;
+let min: number;
+let max: number;
+
 export const load = (async ({ fetch }) => {
 	const last_30_days_res = await fetch(`https://api.alternative.me/fng/?limit=30`);
 	const last_30_days = await last_30_days_res.json();
@@ -26,6 +29,10 @@ export const load = (async ({ fetch }) => {
 	function calculateMedian(arr: number[]): number {
 		// Sort the array in ascending order
 		const sortedArr = arr.sort((a, b) => a - b);
+		min = sortedArr[0];
+		max = sortedArr[sortedArr.length - 1];
+
+		console.log(min, max);
 
 		// Find the middle index
 		const middleIndex = Math.floor(sortedArr.length / 2);
@@ -64,5 +71,14 @@ export const load = (async ({ fetch }) => {
 		return item.value_classification;
 	});
 
-	return { last_30_days, chart_values, chart_times, chart_classification, percent_change, median };
+	return {
+		last_30_days,
+		chart_values,
+		chart_times,
+		chart_classification,
+		percent_change,
+		median,
+		min,
+		max
+	};
 }) satisfies PageLoad;
