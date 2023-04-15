@@ -55,15 +55,35 @@
 
 					<div>
 						{#if fear_greed_classification === 'Extreme Fear'}
-							<div class="bg-emerald-900 rounded-full py-1 px-2">BUY 🚀</div>
+							<div
+								class="bg-emerald-900 rounded-full py-1 px-2 hover:bg-emerald-800 transition-all duration-200"
+							>
+								BUY 🚀
+							</div>
 						{:else if fear_greed_classification === 'Fear'}
-							<div class="bg-emerald-600 rounded-full py-1 px-2">BUY 🚀</div>
+							<div
+								class="bg-emerald-600 rounded-full py-1 px-2 hover:bg-emerald-500 transition-all duration-200"
+							>
+								BUY 🚀
+							</div>
 						{:else if fear_greed_classification === 'Neutral'}
-							<div class="bg-amber-600 rounded-full py-1 px-2">HOLD 🕜</div>
+							<div
+								class="bg-amber-600 rounded-full py-1 px-2 hover:bg-amber-500 transition-all duration-200"
+							>
+								HOLD 🕜
+							</div>
 						{:else if fear_greed_classification === 'Greed'}
-							<div class="bg-red-600 rounded-full py-1 px-2">HOLD 🕐</div>
+							<div
+								class="bg-red-600 rounded-full py-1 px-2 hover:bg-red-500 transition-all duration-200"
+							>
+								HOLD 🕐
+							</div>
 						{:else if fear_greed_classification === 'Extreme Greed'}
-							<div class="bg-red-900 rounded-full py-1 px-2">SELL 💰</div>
+							<div
+								class="bg-red-900 rounded-full py-1 px-2 hover:bg-red-800 transition-all duration-200"
+							>
+								SELL 💰
+							</div>
 						{/if}
 					</div>
 				</a>
