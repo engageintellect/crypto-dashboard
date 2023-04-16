@@ -13,10 +13,7 @@ export const load = (async ({ fetch }) => {
 	const day_1 = last_30_days.data[0].value;
 	const day_30 = last_30_days.data[29].value;
 
-	const percent_change_raw = ((day_1 - day_30) / day_30) * 100;
-	const percent_change = percent_change_raw.toFixed(2);
-
-	console.log(last_30_days.data);
+	const percent_change = (((day_1 - day_30) / day_30) * 100).toFixed(2);
 
 	interface Data {
 		value: number;
@@ -48,10 +45,6 @@ export const load = (async ({ fetch }) => {
 
 	// Calculate the median of the extracted numeric data values
 	const median = calculateMedian(numericValues);
-
-	// console.log('Median Value: ', median);
-
-	// console.log('percent change is', percent_change);
 
 	chart_times = last_30_days.data.map((item: { timestamp: number }) => {
 		return new Date(item.timestamp * 1000).toLocaleDateString('en-US', {
