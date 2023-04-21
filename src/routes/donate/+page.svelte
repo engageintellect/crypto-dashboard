@@ -6,7 +6,7 @@
 	import TechnicalAnalysis from '$lib/components/TechnicalAnalysis.svelte';
 	import FaBitcoin from 'svelte-icons/fa/FaBitcoin.svelte';
 	import FaEthereum from 'svelte-icons/fa/FaEthereum.svelte';
-	import FaPayPal from 'svelte-icons/fa/FaPayPal.svelte';
+	import FaPaypal from 'svelte-icons/fa/FaPaypal.svelte';
 	import FaCommentDollar from 'svelte-icons/fa/FaCommentDollar.svelte';
 
 	let description = JSON.stringify(data.description.en);
@@ -55,8 +55,8 @@
 					<div
 						class="bg-base-300 md:hover:bg-base-200 md:hover:shadow-lg transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
 					>
-						<div class="w-10 h-10"><FaPayPal /></div>
-						<div>FaPayPal</div>
+						<div class="w-10 h-10"><FaPaypal /></div>
+						<div>PayPal</div>
 					</div>
 				</a>
 			</div>
