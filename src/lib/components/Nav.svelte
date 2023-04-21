@@ -24,10 +24,10 @@
 				<li>
 					<a class="hover:bg-base-200" href="/">Home</a>
 				</li>
-				<li><a class="hover:bg-base-200" href="/about">About</a></li>
 				<li><a class="hover:bg-base-200" href="/fear_greed">Fear & Greed</a></li>
-				<li><a class="hover:bg-base-200" href="/news">News</a></li>
+				<li><a class="hover:bg-base-200" href="/about">About</a></li>
 				<li><a class="hover:bg-base-200" href="/posts">Posts</a></li>
+				<li><a class="hover:bg-base-200" href="/donate">Donate</a></li>
 			</ul>
 		</div>
 	</div>

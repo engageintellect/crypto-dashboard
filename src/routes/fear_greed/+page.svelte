@@ -27,7 +27,7 @@
 </script>
 
 <div class="px-2">
-	<div class="text-4xl">Fear & Greed</div>
+	<div class="text-4xl font-semibold">Fear & Greed</div>
 
 	<!-- ----------------------------------------------- -->
 	<!-- TODAY -->
