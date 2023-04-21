@@ -6,7 +6,7 @@
 
 <div class="px-2">
 	<div class="text-center text-xl">COMING SOON...</div>
-	<div class="text-4xl">Posts:</div>
+	<div class="text-4xl font-semibold">Posts:</div>
 	<div>
 		{#each data.posts as post}
 			<div class="card">

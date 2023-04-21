@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FaBitcoin from 'svelte-icons/fa/FaBitcoin.svelte';
 	import type { PageData } from './$types';
 	import BitcoinChart from '$lib/components/BitcoinChart.svelte';
 	export let data: PageData;
@@ -24,10 +25,15 @@
 	<div class="p-4">
 		<div class="flex justify-between items-center">
 			<div>
-				<div class="text-xl text-base-content lg:text-2xl font-semibold">BTC/USD</div>
+				<div class="text-xl text-base-content lg:text-2xl font-semibold">
+					<div class="flex gap-2 items-center pb-2">
+						<div class="w-7 h-7"><FaBitcoin /></div>
+						<div>BTC/USD</div>
+					</div>
+				</div>
 
 				<div
-					class="text-4xl lg:text-5xl font-extrabold {up_today == 'neutral'
+					class="text-4xl lg:text-5xl font-bold {up_today == 'neutral'
 						? 'text-info'
 						: up_today == 'up'
 						? 'text-emerald-600'
