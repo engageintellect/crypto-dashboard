@@ -38,8 +38,13 @@
 
 		<div class="card">
 			<div class="my-2">
+				<div class="flex justify-center gap-5 uppercase text-xs text-neutral-content pb-2">
+					<div class="w-full text-center">Score</div>
+					<div class="w-full text-center">Sentiment</div>
+					<div class="w-full text-center">Action</div>
+				</div>
 				<div
-					class="flex uppercase justify-center h-24 gap-2 sm:gap-5 items-center text-lg md:text-xlg lg:text-2xl"
+					class="flex uppercase justify-center h-24 gap-2 sm:gap-5 items-center text-lg md:text-xl lg:text-2xl"
 				>
 					<Card classification="{fear_greed}/100" bg_color="bg-base-100" />
 
@@ -92,9 +97,7 @@
 						</div>
 					{:else if Number(data.percent_change) < 0}
 						<div class="text-lg mb-2 text-neutral flex-col sm:flex-row sm:gap-2">
-							Last 30 Days: <span class="text-red-500 text-xl font-semibold"
-								>{data.percent_change}%</span
-							>
+							Change: <span class="text-red-500 text-xl font-semibold">{data.percent_change}%</span>
 						</div>
 					{:else if Number(data.percent_change) === 0}
 						<div class="text-lg mb-2 text-neutral flex-col sm:flex-row sm:gap-2">
@@ -138,7 +141,7 @@
 			<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-5">
 				{#each data.last_30_days.data as day}
 					<div
-						class="flex flex-col bg-base-100 p-2 gap-2 shadow-md justify-center items-center rounded-md"
+						class="flex flex-col bg-base-100 md:hover:shadow-primary transition-all duration-200 p-2 gap-2 shadow-sm justify-center items-center rounded-md"
 					>
 						<div class="font-thin text-sm">
 							{new Date(day.timestamp * 1000).toLocaleDateString('en-US', {

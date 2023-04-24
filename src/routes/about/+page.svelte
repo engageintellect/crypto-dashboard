@@ -111,6 +111,10 @@
 				towards the asset, providing a potential opportunity for buying or selling the
 				cryptocurrency.
 			</div>
+
+			<div class="pt-10">
+				<a href="/donate" class="btn btn-outline w-full">donate</a>
+			</div>
 		</div>
 	</div>
 

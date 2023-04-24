@@ -18,12 +18,13 @@
 	<div class="text-4xl font-semibold text-neutral-content">Donate:</div>
 
 	<div class="text-primary font-semibold">
-		<p>
-			Please consider donating to this project. Your donation will help us to continue our work and
-			make future improvements.
-		</p>
-
-		<p>Every little bit helps, your support is appreciated.</p>
+		<div class="text-sm md:text-lg">
+			<div class="pb-2">
+				Please consider donating to this project. Your donation will help us to continue our work
+				and make future improvements.
+			</div>
+			<div>Every little bit helps, your support is appreciated.</div>
+		</div>
 	</div>
 
 	<div class="flex flex-col gap-5 bg-base-100 p-4 rounded-md shadow-md">
@@ -45,7 +46,7 @@
 						class="bg-base-300 md:hover:bg-base-200 md:hover:shadow-lg transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
 					>
 						<div class="w-10 h-10"><FaEthereum /></div>
-						<div>FaEthereum</div>
+						<div>Ethereum</div>
 					</div>
 				</a>
 			</div>
