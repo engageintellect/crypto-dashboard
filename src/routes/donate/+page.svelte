@@ -32,7 +32,7 @@
 			<div>
 				<a href="https://mempool.space/address/bc1qeywstujt6lkvfcwr30kklavr25jxvr7d53jh0ja">
 					<div
-						class="bg-base-300 md:hover:bg-base-200 md:hover:shadow-lg transition-all duration-200 rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
+						class="bg-base-300 md:hover:shadow-primary transition-all duration-200 rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
 					>
 						<div class="w-10 h-10"><FaBitcoin /></div>
 						<div>Bitcoin</div>
@@ -43,7 +43,7 @@
 			<div>
 				<a href="https://etherscan.io/address/0xbCF8407880978E86BDCd53C04796713F24e6Ee3c">
 					<div
-						class="bg-base-300 md:hover:bg-base-200 md:hover:shadow-lg transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
+						class="bg-base-300 md:hover:shadow-primary transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
 					>
 						<div class="w-10 h-10"><FaEthereum /></div>
 						<div>Ethereum</div>
@@ -54,7 +54,7 @@
 			<div>
 				<a href="https://paypal.me/jc9361">
 					<div
-						class="bg-base-300 md:hover:bg-base-200 md:hover:shadow-lg transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
+						class="bg-base-300 md:hover:shadow-primary transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
 					>
 						<div class="w-10 h-10"><FaPaypal /></div>
 						<div>PayPal</div>
@@ -65,7 +65,7 @@
 			<div>
 				<a href="https://cash.app/jc9361">
 					<div
-						class="bg-base-300 md:hover:bg-base-200 md:hover:shadow-lg transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
+						class="bg-base-300 md:hover:shadow-primary transition-all rounded-md shadow-md p-4 h-24 text-center flex justify-center items-center gap-2 text-2xl font-semibold text-neutral-content pb-2"
 					>
 						<div class="w-10 h-10"><FaCommentDollar /></div>
 						<div>CashApp</div>
