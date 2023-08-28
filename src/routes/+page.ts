@@ -1,21 +1,23 @@
 import type { PageLoad } from './$types';
 
 export const load = (async ({ fetch }) => {
-	const btc_res = await fetch(`https://api.blockchain.com/v3/exchange/tickers/BTC-USD`);
-	const btc = await btc_res.json();
-	const yesterday = await btc.price_24h;
-	const today = await btc.last_trade_price;
-	const volume = await btc.volume_24h;
+  try {
+    const [btc_res, fear_res] = await Promise.all([
+      fetch('https://api.blockchain.com/v3/exchange/tickers/BTC-USD'),
+      fetch('https://api.alternative.me/fng/?limit=1')
+    ]);
 
-	//! This API is often down.
-	// const btc_daily_res = await fetch(
-	// 	`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1&interval=daily`
-	// );
-	// const btc_daily = await btc_daily_res.json();
-	// const btc_yesterday = await btc_daily.prices[0][1];
+    const [btc, fear] = await Promise.all([
+      btc_res.json(),
+      fear_res.json()
+    ]);
 
-	const fear_res = await fetch(`https://api.alternative.me/fng/?limit=1`);
-	const fear = await fear_res.json();
+    const { price_24h: yesterday, last_trade_price: today, volume_24h: volume } = btc;
 
-	return { btc, today, yesterday, volume, fear };
+    return { btc, today, yesterday, volume, fear };
+  } catch (error) {
+    // Handle errors appropriately
+    console.error('An error occurred:', error);
+    throw error;
+  }
 }) satisfies PageLoad;

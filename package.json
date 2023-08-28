@@ -32,7 +32,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@carbon/charts-svelte": "^1.11.21",
+		"@carbon/styles": "^1.36.0",
+		"d3": "^7.8.5",
 		"daisyui": "^2.46.1",
+		"svelte-chartjs": "^3.1.2",
 		"svelte-frappe-charts": "^1.10.0",
 		"svelte-icons": "^2.1.0"
 	}

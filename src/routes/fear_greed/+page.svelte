@@ -3,7 +3,6 @@
 	import type { PageData } from './$types';
 	import tw from 'tailwindcss/colors';
 
-	//TODO: fix this
 	// @ts-ignore
 	import Chart from 'svelte-frappe-charts';
 	import Colors from '$lib/components/Colors.svelte';
@@ -13,7 +12,7 @@
 	const fear_greed = data.last_30_days.data[0].value;
 	const fear_greed_classification = data.last_30_days.data[0].value_classification;
 	let chart_times = data.chart_times.reverse();
-	let chart_values = data.chart_values.reverse();
+	let chart_values = data.chart_values;
 	// let chart_classification = data.chart_classification.reverse();
 
 	let chart_data = {
@@ -92,13 +91,11 @@
 						</div>
 					{:else if Number(data.percent_change) < 0}
 						<div class="text-lg mb-2 text-neutral flex-col sm:flex-row sm:gap-2">
-							Last 30 Days: <span class="text-red-500 text-xl font-semibold"
-								>{data.percent_change}%</span
-							>
+							Change: <span class="text-red-500 text-xl font-semibold">{data.percent_change}%</span>
 						</div>
 					{:else if Number(data.percent_change) === 0}
 						<div class="text-lg mb-2 text-neutral flex-col sm:flex-row sm:gap-2">
-							Last 30 Days: <span class="text-amber-500 text-xl font-semibold"
+							Change: <span class="text-amber-500 text-xl font-semibold"
 								>{data.percent_change}%</span
 							>
 						</div>
@@ -131,7 +128,6 @@
 					spaceRatio={0.5}
 					animate={true}
 					maxSlices={true}
-					xAxisMode={'tick'}
 				/>
 			</div>
 
@@ -149,17 +145,17 @@
 							})}
 						</div>
 
-						<div>
+						<div class="text-base-300 font-semibold">
 							{#if day.value_classification === 'Extreme Fear'}
-								<span class="bg-emerald-900 rounded-full py-1 px-2">BUY</span>
+								<span class="bg-emerald-900 rounded py-1 px-2">BUY</span>
 							{:else if day.value_classification === 'Fear'}
-								<span class="bg-emerald-600 rounded-full py-1 px-2">BUY</span>
+								<span class="bg-emerald-600 rounded py-1 px-2">BUY</span>
 							{:else if day.value_classification === 'Neutral'}
-								<span class="bg-amber-600 rounded-full py-1 px-2">HOLD</span>
+								<span class="bg-amber-600 rounded py-1 px-2">HOLD</span>
 							{:else if day.value_classification === 'Greed'}
-								<span class="bg-red-600 rounded-full py-1 px-2">HOLD</span>
+								<span class="bg-red-600 rounded py-1 px-2">HOLD</span>
 							{:else if day.value_classification === 'Extreme Greed'}
-								<span class="bg-red-900 rounded-full py-1 px-2">SELL</span>
+								<span class="bg-red-900 rounded py-1 px-2">SELL</span>
 							{/if}
 						</div>
 
@@ -172,3 +168,9 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	line {
+		display: none;
+	}
+</style>
