@@ -37,9 +37,9 @@
 		classificationStyles[fear_greed_classification as keyof ClassificationStyles];
 </script>
 
-<div class="bg-base-300 shadow-lg min-h-screen rounded-md p-4">
+<div class="bg-base-300 shadow-lg min-h-screen rounded-md px-2 md:px-4">
 	<div class="flex justify-between items-center">
-		<div>
+		<div class="py-2 md:py-4">
 			<div class="text-xl text-base-content lg:text-2xl font-semibold">
 				<div class="flex gap-2 items-center pb-2">
 					<div class="w-7 h-7"><FaBitcoin /></div>
@@ -66,19 +66,26 @@
 		<div
 			class="text-lg lg:text-xl text-base-content flex flex-col lg:flex-row lg:gap-5 uppercase items-center"
 		>
-			<a href="/fear_greed" class="flex items-center gap-5">
-				<div class="hidden lg:flex">
+			<!-- <div class="hidden lg:flex py-1 px-2">
 					{fear_greed}/100
 				</div>
-				<div class="hidden lg:flex">
+				<div class="hidden lg:flex py-1 px-2">
 					{fear_greed_classification}
-				</div>
+				</div> -->
+
+			<div class="flex flex-col gap-2">
 				<div
 					class={`bg-${bgColor} rounded py-1 px-2 hover:bg-${hoverBgColor} transition-all duration-200`}
 				>
-					{text}
+					<a href="/fear_greed" class="flex items-end gap-5">
+						{text}
+					</a>
 				</div>
-			</a>
+
+				<div class="bg-base-100 py-1 px-2 rounded h-full">
+					<a href="/news">News 📰</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<BitcoinChart />

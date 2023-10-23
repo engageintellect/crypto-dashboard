@@ -19,15 +19,15 @@
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<ul
 				tabindex="0"
-				class="menu menu-compact dropdown-content mt-7 p-2 shadow-lg bg-base-300 w-52 rounded-md"
+				class="menu menu-compact dropdown-content mt-7 p-2 shadow-lg bg-base-300 border border-base-100 w-52 rounded"
 			>
 				<li>
-					<a class="hover:bg-base-200" href="/">Home</a>
+					<a class="hover:bg-base-200 text-lg" href="/">Home</a>
 				</li>
-				<li><a class="hover:bg-base-200" href="/fear_greed">Fear & Greed</a></li>
-				<li><a class="hover:bg-base-200" href="/about">About</a></li>
-				<li><a class="hover:bg-base-200" href="/posts">Posts</a></li>
-				<li><a class="hover:bg-base-200" href="/donate">Donate</a></li>
+				<li><a class="hover:bg-base-200 text-lg" href="/fear_greed">Fear & Greed</a></li>
+				<li><a class="hover:bg-base-200 text-lg" href="/about">About</a></li>
+				<li><a class="hover:bg-base-200 text-lg" href="/news">News</a></li>
+				<li><a class="hover:bg-base-200 text-lg" href="/donate">Donate</a></li>
 			</ul>
 		</div>
 	</div>

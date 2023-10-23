@@ -72,7 +72,7 @@
 		</div>
 
 		<div class="text-center">
-			<a href="/about"> What is the Fear & Greed Index?</a>
+			<a href="/about" class="underline"> What is the Fear & Greed Index?</a>
 		</div>
 
 		<!-- ----------------------------------------------- -->
